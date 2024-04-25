@@ -1,0 +1,22 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 04-abr-2024, 12:13:29
+    Author     : Fran
+*/
+.nombre{
+    color:green;
+}
+
+.curso{
+    font-weight: bold;
+}
+
+body{
+    background-color: gainsboro;
+}
+
+

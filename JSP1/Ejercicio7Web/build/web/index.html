@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            document.getElementById("botones");
+                        document.getElementById("tipoMoneda");
+                                                document.getElementById("botonAEuros");
+
+                        document.getElementById("botonAPesetas");
+                                                document.getElementById("formulario");
+                                                document.getElementById("cantidadDe");
+
+
+
+            
+            function conversorAEuros(){
+                botones.style.display="none";
+                tipoMoneda.innerText="pesetas"
+                botonAEuros.style.display="block"
+                formulario.style.display="block"
+                cantidadDe.style.display="block"
+            }
+            function conversorAPesetas(){
+                botones.style.display="none";
+                tipoMoneda.innerText="euros"
+                botonAPesetas.style.display="block";
+                                formulario.style.display="block"
+                                                cantidadDe.style.display="block"
+
+
+            }
+            
+            function pasarAEuros(){
+                var numero = document.getElementById("numero").value;
+                var resultado = numero / 166.386;
+                document.getElementById("resultado").innerText="La conversión es: "+resultado+" euros";
+
+            }
+             function pasarAPesetas(){
+                var numero = document.getElementById("numero").value;
+                var resultado = numero * 166.386;
+                document.getElementById("resultado").innerText="La conversión es: "+resultado+" pesetas";
+
+            }
+            
+            </script>
+    </head>
+    <body>
+        <div>Conversor</div>
+        <form>
+            <div id="botones" style="display:flex;display:block">
+        <button type="button" onclick="conversorAEuros()" style="display:block">Conversion a euros</button>
+        <button type="button" onclick="conversorAPesetas()" style="display:block">Conversion a pesetas</button>  
+            </div>
+               </form>
+
+
+            <form id="formulario" style="display:none ">
+                <div id="cantidadDe" style="display:none; display:flex">Introduzca la cantidad de <div id="tipoMoneda"></div>:
+            <input type="text" id="numero" ></div>
+            <div id="botonAEuros" style="display:none">            
+                <button type="button" onclick="pasarAEuros()">Conversion</button>
+            </div>
+            
+            <div  id="botonAPesetas" style="display:none">
+                            <button type="button" onclick="pasarAPesetas()">Conversion</button>
+            </div>
+        </form>
+                       <div id="resultado"></div>
+
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script>
+            function pasarAEuros(){
+                var numero = document.getElementById("numero").value;
+                var resultado = numero / 166.386;
+                document.getElementById("resultado").innerText="La conversión es: "+resultado+" euros";
+
+            }
+        </script>
+    </head>
+    <body>
+        <div>Conversor pesetas a euros</div>
+        
+        <form>
+            Introduzca la cantidad de pesetas:
+            <input type="text" id="numero" >
+        <button type="button" onclick="pasarAEuros()">Conversion</button>
+        </form>
+
+           <div id="resultado"></div>
+    </body>
+</html>
