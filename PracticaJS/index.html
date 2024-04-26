@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Compras de Sesión</title>
+</head>
+<body>
+    <h1>Lista de Compras con Manejo de Sesión</h1>
+    <form id="loginForm">
+        <input type="text" id="username" placeholder="Ingresa tu nombre">
+        <button type="button" onclick="login()">Iniciar Sesión</button>
+    </form>
+    <p id="sessionStatus">No hay ninguna sesión iniciada.</p>
+    <br>
+    <input type="text" id="item" placeholder="Añadir artículo">
+    <button id="listaCompra">Mostrar Lista de Compras</button>
+    <div class="productosMostrar" id="productosMostrar" style="display:flex ; gap:50px"></div>
+    <p id="result"></p>
+    <button onclick="logout()">Cerrar Sesión</button>
+    <div class="recuento" id="recuento"></div>
+    <script src="script.js"></script>
+</body>
+</html>
