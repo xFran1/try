@@ -103,7 +103,7 @@ function agregarEntrada(nombre,foto) {
             if(sesionIniciada===1){
                 var palabra = nuevoDiv.innerHTML;
                 ProductosComprados.push(palabra);
-
+                actualizarCesta();
                
             console.log("Ha sido comprado "+palabra)
         }else{
@@ -122,13 +122,17 @@ function agregarEntrada(nombre,foto) {
     divGrande.appendChild(botonComprar);
 
 }
-document.getElementById("listaCompra").addEventListener("click",() =>{
 
+
+
+function actualizarCesta(){
     let contador  = 0;
     let precio = 0;
+    while (recuento.firstChild) {
+        recuento.removeChild(recuento.firstChild);
+    }
     productos.forEach(elemento =>{
         ProductosComprados.forEach(productoComprado =>{
-            console.log("Comparacion de : "+elemento.nombre+" a "+productoComprado)
             if(elemento.nombre===productoComprado){
                 contador++;
                 precio=elemento.precio;
@@ -138,7 +142,10 @@ document.getElementById("listaCompra").addEventListener("click",() =>{
         if(contador>0){
             var divGrande = document.createElement("div");
             precio=precio.replace("€","")
-            divGrande.textContent=elemento.nombre+" "+contador*precio;
+            contador=contador*precio
+            contador=parseFloat(contador.toFixed(3));
+
+            divGrande.textContent=elemento.nombre+" "+contador;
             recuento.appendChild(divGrande);
             precio =0 ;
             contador =0;
@@ -146,8 +153,10 @@ document.getElementById("listaCompra").addEventListener("click",() =>{
        
     });
     
+}
+   
 
-});
+
 
 
 // Función para cerrar sesión
